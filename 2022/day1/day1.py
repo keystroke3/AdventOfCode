@@ -1,5 +1,5 @@
 """
-Advent of Code 2022 Day1
+Advent of Code 2022 Day1: Calories
 """
 from typing import TextIO
 
@@ -40,3 +40,10 @@ def top3_calories(f: TextIO) -> int:
                 calory_count = 0
             if calories == "":
                 return sum(top1, top2, top3)
+
+
+# with open("input.txt") as f:
+#     print(highest_calory(f))
+
+# with open("input.txt") as f:
+#     print(top3_calories(f))
