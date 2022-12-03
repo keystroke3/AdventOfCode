@@ -48,17 +48,14 @@ def part2_round_points(shapes: str) -> int:
         shape = LOSSES[opponent_shape]
         result_point = LOSS_POINTS
         shape_point = SHAPE_POINTS[shape]
-        # print(f"loss, {result_point=} {shape_point=}")
     elif goal == WIN:
         shape = WINS[opponent_shape]
         result_point = WIN_POINTS
         shape_point = SHAPE_POINTS[shape]
-        # print(f"win, {result_point=} {shape_point=}")
     else:
         shape = opponent_shape
         result_point = DRAW_POINTS
         shape_point = SHAPE_POINTS[shape]
-        # print(f"draw, {result_point=} {shape_point=}")
     return result_point + shape_point
 
 
