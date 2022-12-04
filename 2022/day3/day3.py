@@ -30,5 +30,8 @@ def part1_priority_sum(f: TextIO) -> int:
         priority_sum += ascii_letters.index(common_item) + 1
 
 
-with open("test_input.txt") as f:
-    print(part2_priority_sum(f))
+# with open("input.txt") as f:
+#     print(part1_priority_sum(f))
+
+# with open("input.txt") as f:
+#     print(part2_priority_sum(f))

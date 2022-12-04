@@ -71,5 +71,5 @@ def get_score(f: TextIO, part: int = 1) -> int:
             score += part2_round_points(shapes)
 
 
-with open("input.txt") as f:
-    print(get_score(f, 2))
+# with open("input.txt") as f:
+#     print(get_score(f, 2))
