@@ -21,32 +21,19 @@ def get_assignment_sets(line: str) -> list:
     return assignment_sets
 
 
-# part 1
-def count_subsets(f: TextIO) -> int:
+def part1_and_2(f: TextIO) -> int:
+    overlap_count = 0
     subset_count = 0
     while True:
         line = f.readline().strip()
         if line == "":
-            return subset_count
+            return f"{overlap_count=}, {subset_count=}"
         _sets = get_assignment_sets(line)
+        if has_overlap(*_sets):
+            overlap_count += 1
         if has_subset(*_sets):
             subset_count += 1
 
 
-# part 2
-def count_overlaps(f: TextIO) -> int:
-    overlap_count = 0
-    while True:
-        line = f.readline().strip()
-        if line == "":
-            return overlap_count
-        _sets = get_assignment_sets(line)
-        if has_overlap(*_sets):
-            overlap_count += 1
-
-
-# with open("input.txt") as f:
-#     print(count_subsets(f))
-
-# with open("input.txt") as f:
-#     print(count_overlaps(f))
+with open("input.txt") as f:
+    print(part1_and_2(f))
