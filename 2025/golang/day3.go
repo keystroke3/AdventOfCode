@@ -97,11 +97,11 @@ func day3p1v3(input []string) int {
 func day3p2(input []string) int {
 	sumOfJoltages := 0
 	for _, bank := range input {
-		heighestJolts := []rune{}
-		limit := 12
+		batteries := 12
 		start := 0
-		for i := limit; i > 0; i-- {
-			trimmed := bank[start : len(bank)-(i-1)]
+		heighestJolts := make([]rune, batteries)
+		for i := batteries - 1; i >= 0; i-- {
+			trimmed := bank[start : len(bank)-i]
 			hiJolt := '0'
 			hiJoltIndex := 0
 			for index, jolt := range trimmed {
@@ -111,7 +111,7 @@ func day3p2(input []string) int {
 				}
 			}
 			start = start + 1 + hiJoltIndex
-			heighestJolts = append(heighestJolts, hiJolt)
+			heighestJolts[(batteries-1)-i] = hiJolt
 		}
 		joltageStr := string(heighestJolts)
 		joltage, _ := strconv.Atoi(joltageStr)
