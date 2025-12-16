@@ -63,7 +63,7 @@ func part2(input []string) {
 }
 
 func day1() {
-	input := loadInput("day1.txt")
+	input := loadInput("../inputs/day1.txt")
 	part1(input)
 	part2(input)
 }

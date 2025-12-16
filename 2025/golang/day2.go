@@ -67,7 +67,7 @@ func day2p2(input []string) {
 
 func day2() {
 
-	input := loadInput("day2.txt")
+	input := loadInput("../inputs/day2.txt")
 	_ = input
 	day2p1(input)
 	day2p2(input)
